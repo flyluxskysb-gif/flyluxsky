@@ -51,13 +51,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({coords, initialFromAirport}) =
       <Navbar isDarkBackground={true} />
       <div className="w-full max-w-[1280px] mx-auto flex flex-col items-center relative">
         {/* Title */}
-        <div className="flex flex-col items-center w-full mt-16 mb-10 text-center">
+        <div className="flex flex-col items-center w-full mt-10 mb-5 text-center">
           <h1 className="font-poppins font-bold text-[40px] md:text-[72px] leading-[1em] text-white">
-          Your Gateway to Exclusive Business Class Savings
+          Unique Business & First Class Savings
           </h1>
 
-          <p className="font-poppins font-light text-[20px] md:text-[32px] leading-[1.4em] text-[#F0FBFA]">
-            Comfort, Savings, and Smarter Travel
+          
+        <p className="font-poppins font-light text-[20px] mt-6 md:text-[32px] leading-[1.4em] text-[#F0FBFA]">
+            Fly in Luxury, above the Sky
           </p>
         </div>
         
@@ -92,7 +93,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({coords, initialFromAirport}) =
         </AnimatePresence>
 
         {/* Flight search forms - responsive */}
-        <div ref={formRef} className={`w-full transition-opacity duration-300 ${isSticky ? 'opacity-0' : 'opacity-100'}`}>
+        <div ref={formRef} className={`w-full transition-opacity duration-300ticky ? 'opacity-0' : 'opacity-100'}`}>
           {/* Desktop form - скрыта на мобильных */}
           <div className="hidden md:block w-full">
             <FlightSearchForm 

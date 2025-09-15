@@ -194,7 +194,7 @@ const cities = [
     country: 'United States',
     countryCode: 'US',
     image: '/images/cities/new-york.jpg',
-    // video: '/video/new-york.mp4', // Video file not available
+    video: '/video/newyork_1.mp4',
     description: 'The Big Apple - America\'s financial and cultural capital offering Broadway shows, world-class museums, and unparalleled business opportunities.',
     airports: ['JFK', 'LGA', 'EWR'],
     airlines: ['American Airlines', 'Delta', 'Emirates'],
@@ -207,7 +207,7 @@ const cities = [
     country: 'Hong Kong',
     countryCode: 'HK',
     image: '/images/cities/hong-kong.jpg',
-    // video: '/video/hong-kong.mp4', // Video file not available
+    video: '/video/honkong_1.mp4',
     description: 'Pearl of the Orient - where East meets West in a dynamic metropolis of towering skyscrapers, dim sum, and bustling harbors.',
     airports: ['HKG'],
     airlines: ['Cathay Pacific', 'Emirates', 'Singapore Airlines'],
@@ -250,30 +250,31 @@ const CityCard = ({ city }: { city: typeof cities[0] }) => {
         {/* City Image/Video */}
         <div className="relative h-48 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
-          {isHovered && city.video ? (
+          
+          {/* Static Image */}
+          <Image
+            src={city.image}
+            alt={`${city.name} destination`}
+            fill
+            className={`object-cover transition-all duration-300 ${
+              isHovered ? 'opacity-0' : 'opacity-100 group-hover:scale-105'
+            }`}
+          />
+          
+          {/* Video */}
+          {city.video && (
             <video
               ref={videoRef}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                isHovered ? 'opacity-100' : 'opacity-0'
+              }`}
               muted
               loop
               playsInline
-              autoPlay
-              onLoadedData={() => {
-                if (videoRef.current && isHovered) {
-                  videoRef.current.currentTime = 0;
-                  videoRef.current.play().catch(console.log);
-                }
-              }}
+              preload="metadata"
             >
               <source src={city.video} type="video/mp4" />
             </video>
-          ) : (
-            <Image
-              src={city.image}
-              alt={`${city.name} destination`}
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
-            />
           )}
           {/* Country Badge */}
           <div className="absolute top-4 left-4 z-20">
