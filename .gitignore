@@ -37,6 +37,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Cursor
-.cursor/
-.cursor/rules/
+# Archived files
+archived_files/

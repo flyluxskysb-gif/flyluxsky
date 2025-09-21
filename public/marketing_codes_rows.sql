@@ -1,1 +1,0 @@
-INSERT INTO "public"."marketing_codes" ("id", "google_tag_manager", "google_analytics_4", "google_search_console", "bing_webmaster_tools", "facebook_pixel", "google_ads_tag", "hotjar", "kommo_chat", "created_at", "updated_at") VALUES ('1', '', '', '', '', '', '', '', '', '2025-08-14 11:16:08.112832+00', '2025-08-15 14:43:07.645+00');
