@@ -166,9 +166,9 @@ export default function CountryPage({ slug }: CountryPageProps) {
           <Navbar isDarkBackground={true} />
           <div className="flex-1 w-full max-w-[1280px] mx-auto px-2 flex flex-col items-center justify-start pt-16">
             <div className="text-white text-center w-full">
-              <h1 className="text-6xl sm:text-8xl font-extrabold tracking-tight">{countryContent.title}</h1>
-              <p className="mt-2 text-2xl sm:text-3xl font-semibold">{countryContent.subtitle}</p>
-              <p className="mt-4 max-w-3xl mx-auto text-base sm:text-lg text-white/90">
+              <h1 className="text-6xl sm:text-8xl font-extrabold tracking-tight drop-shadow-lg">{countryContent.title}</h1>
+              <p className="mt-2 text-2xl sm:text-3xl font-semibold drop-shadow-md">{countryContent.subtitle}</p>
+              <p className="mt-4 max-w-3xl mx-auto text-base sm:text-lg text-white/95 drop-shadow-md">
                 {countryContent.description}
               </p>
             </div>

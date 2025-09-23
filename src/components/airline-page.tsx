@@ -295,15 +295,17 @@ export default function AirlinePage({ slug }: AirlinePageProps) {
             priority
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0ABAB5]/45 via-[#0ABAB5]/25 to-transparent" />
+          {/* Enhanced overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0FBAB5]/30 via-[#0FBAB5]/75 to-transparent" />
         </div>
         <div className="relative z-10 flex flex-col min-h-[700px]">
           <Navbar isDarkBackground={true} />
           <div className="flex-1 w-full max-w-[1280px] mx-auto px-2 flex flex-col items-center justify-start pt-16">
             <div className="text-white text-center w-full">
-              <h1 className="text-6xl sm:text-8xl font-extrabold tracking-tight">{airlineContent.title}</h1>
-              <p className="mt-2 text-2xl sm:text-3xl font-semibold">{airlineContent.subtitle}</p>
-              <p className="mt-4 max-w-3xl mx-auto text-base sm:text-lg text-white/90">
+              <h1 className="text-6xl sm:text-8xl font-extrabold tracking-tight drop-shadow-lg">{airlineContent.title}</h1>
+              <p className="mt-2 text-2xl sm:text-3xl font-semibold drop-shadow-md">{airlineContent.subtitle}</p>
+              <p className="mt-4 max-w-3xl mx-auto text-base sm:text-lg text-white/95 drop-shadow-md">
                 {airlineContent.description}
               </p>
             </div>

@@ -762,7 +762,7 @@ const FlightSearchFormMobile: React.FC<FlightSearchFormMobileProps> = ({
                   setMultiCityModalOpen(true)
                 }}
               >
-                <Image src="/icons/airport-from.svg" width={16} height={16} alt="from" className="text-[#0ABAB5]" style={{width: '16px'}} />
+                <Image src="/icons/airport-from.svg" width={14} height={14} alt="from" className="text-[#0ABAB5]" style={{width: '16px'}} />
                 <div className="flex-1">
                   <div className="font-poppins text-xs font-semibold text-[#0D2B29] uppercase mb-1">FROM</div>
                   <div className="font-poppins text-sm text-[#0D2B29]" title={segment.fromSelection?.name}>
@@ -1356,7 +1356,7 @@ const FlightSearchFormMobile: React.FC<FlightSearchFormMobileProps> = ({
                         className="px-4 py-2 bg-gray-50 flex items-center border-b border-gray-100 cursor-pointer hover:bg-gray-100"
                         onClick={() => handleCitySelect(result, 'from')}
                       >
-                        <Image src="/icons/footer/map-pin.svg" width={16} height={16} alt="city" className="mr-3 text-[#0ABAB5] h-auto w-auto" />
+                        <Image src="/icons/footer/map-pin.svg" width={14} height={14} alt="city" className="mr-3 text-[#0ABAB5] h-auto w-auto" style={{width: '16px'}} />
                         <div>
                           <div className="font-poppins font-semibold text-[#0D2B29] text-sm"><HighlightedText text={formatAirportName(result.name)} highlight={fromInput}/></div>
                           <div className="font-poppins text-xs text-gray-500"><HighlightedText text={result.country} highlight={fromInput}/></div>
@@ -1420,7 +1420,7 @@ const FlightSearchFormMobile: React.FC<FlightSearchFormMobileProps> = ({
                         className="px-4 py-2 bg-gray-50 flex items-center border-b border-gray-100 cursor-pointer hover:bg-gray-100"
                         onClick={() => handleCitySelect(result, 'to')}
                       >
-                        <Image src="/icons/footer/map-pin.svg" width={16} height={16} alt="city" className="mr-3 text-[#0ABAB5] h-auto w-auto" />
+                        <Image src="/icons/footer/map-pin.svg" width={14} height={14} alt="city" className="mr-3 text-[#0ABAB5] h-auto w-auto" style={{width: '16px'}} />
                         <div>
                           <div className="font-poppins font-semibold text-[#0D2B29] text-sm"><HighlightedText text={formatAirportName(result.name)} highlight={toInput}/></div>
                           <div className="font-poppins text-xs text-gray-500"><HighlightedText text={result.country} highlight={toInput}/></div>
@@ -1542,7 +1542,7 @@ const FlightSearchFormMobile: React.FC<FlightSearchFormMobileProps> = ({
                         className="px-4 py-2 bg-gray-50 flex items-center border-b border-gray-100 cursor-pointer hover:bg-gray-100"
                         onClick={() => handleMultiCitySelect(multiCityActiveIndex, result, 'from')}
                       >
-                        <Image src="/icons/footer/map-pin.svg" width={16} height={16} alt="city" className="mr-3 text-[#0ABAB5] h-auto w-auto" />
+                        <Image src="/icons/footer/map-pin.svg" width={14} height={14} alt="city" className="mr-3 text-[#0ABAB5] h-auto w-auto" style={{width: '16px'}} />
                         <div>
                           <div className="font-poppins font-semibold text-[#0D2B29] text-sm"><HighlightedText text={formatAirportName(result.name)} highlight={multiSegments[multiCityActiveIndex]?.from || ''} /></div>
                           <div className="font-poppins text-xs text-gray-500"><HighlightedText text={result.country} highlight={multiSegments[multiCityActiveIndex]?.from || ''} /></div>
@@ -1603,7 +1603,7 @@ const FlightSearchFormMobile: React.FC<FlightSearchFormMobileProps> = ({
                         className="px-4 py-2 bg-gray-50 flex items-center border-b border-gray-100 cursor-pointer hover:bg-gray-100"
                         onClick={() => handleMultiCitySelect(multiCityActiveIndex, result, 'to')}
                       >
-                        <Image src="/icons/footer/map-pin.svg" width={16} height={16} alt="city" className="mr-3 text-[#0ABAB5] h-auto w-auto" />
+                        <Image src="/icons/footer/map-pin.svg" width={14} height={14} alt="city" className="mr-3 text-[#0ABAB5] h-auto w-auto" style={{width: '16px'}} />
                         <div>
                           <div className="font-poppins font-semibold text-[#0D2B29] text-sm"><HighlightedText text={formatAirportName(result.name)} highlight={multiSegments[multiCityActiveIndex]?.to || ''} /></div>
                           <div className="font-poppins text-xs text-gray-500"><HighlightedText text={result.country} highlight={multiSegments[multiCityActiveIndex]?.to || ''} /></div>

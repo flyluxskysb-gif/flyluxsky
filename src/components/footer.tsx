@@ -141,11 +141,13 @@ const socialLinks = [
 ];
 
 const paymentMethods = [
-  { name: 'mastercard', logo: '/logos/payment/mastercard.svg' },
+  { name: 'trustpilot', logo: '/logos/payment/trustpilot.svg' },
   { name: 'discover', logo: '/logos/payment/discover.svg' },
   { name: 'generic-card', logo: '/logos/payment/generic-card.svg' },
   { name: 'amex', logo: '/logos/payment/amex.svg' },
   { name: 'visa', logo: '/logos/payment/visa.svg' },
+  { name: 'florida', logo: '/icons/florida.png' },
+  { name: 'iatan', logo: '/icons/iatan.png' },
 ];
 
 const DestinationAccordion = ({ dest, isOpen, onToggle }: { dest: typeof popularDestinations[0], isOpen: boolean, onToggle: () => void }) => {
@@ -348,12 +350,14 @@ const Footer = () => {
         </section>
 
         {/* Bottom Bar */}
-        <section className="flex flex-col md:flex-row justify-between items-center gap-4 py-6 mt-8 border-t border-black/10">
+        <section className="flex flex-col md:flex-row md:justify-between items-center gap-4 py-6 mt-8 border-t border-black/10">
             <div className="text-sm text-black/75 order-2 md:order-1 text-center md:text-left">© 2025 FlyLuxSky . All rights reserved.</div>
             
-            <div className="flex items-center gap-4 order-1 md:order-2">
+            <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 order-1 md:order-2">
                 {paymentMethods.map(method => (
-                    <div key={method.name} className="relative h-6 w-12 flex items-center justify-center">
+                    <div key={method.name} className={`relative h-8 flex items-center justify-center ${
+                        method.name === 'trustpilot' ? 'w-16 md:w-20' : 'w-10 md:w-12'
+                    }`}>
                         <Image src={method.logo} alt={method.name} layout="fill" objectFit="contain" />
                     </div>
                 ))}
