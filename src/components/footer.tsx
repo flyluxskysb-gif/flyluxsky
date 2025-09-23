@@ -135,9 +135,12 @@ const topAirlines = [
 // topCountries and topCities moved inside Footer component to avoid hydration mismatch
 
 const socialLinks = [
-  { name: 'instagram', icon: '/icons/footer/instagram.svg' },
-  { name: 'facebook', icon: '/icons/footer/facebook.svg' },
-  { name: 'twitter', icon: '/icons/footer/twitter.svg' },
+  { name: 'instagram', icon: '/social/instagram.svg', href: 'https://www.instagram.com/luxeskies_com/' },
+  { name: 'facebook', icon: '/social/facebook.svg', href: 'https://www.facebook.com/luxeskies' },
+  { name: 'youtube', icon: '/social/youtube.svg', href: 'https://www.youtube.com/@LuxeSkies' },
+  { name: 'linkedin', icon: '/social/linkedin.svg', href: 'https://www.linkedin.com/company/luxeskiesinc/' },
+  { name: 'tiktok', icon: '/social/tiktok.svg', href: 'https://www.tiktok.com/@luxeskies' },
+  { name: 'trustpilot', icon: '/social/trustpilot.svg', href: 'https://www.trustpilot.com/review/luxeskies.com' },
 ];
 
 const paymentMethods = [
@@ -328,9 +331,9 @@ const Footer = () => {
         <section className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 py-6">
             <div className='flex flex-col items-center md:items-start gap-6 max-w-xs'>
                 <h3 className="text-2xl font-bold text-[#0ABAB5] font-ubuntu lowercase">flyLUXsky</h3>
-                <div className="flex space-x-3">
+                <div className="grid grid-cols-3 gap-3">
                     {socialLinks.map(social => (
-                        <a key={social.name} href="#" className="bg-[#F8F8F8] hover:bg-gray-200 p-2 rounded-lg transition-colors flex items-center justify-center">
+                        <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="bg-[#F8F8F8] hover:bg-gray-200 p-2 rounded-lg transition-colors flex items-center justify-center">
                             <Image src={social.icon} alt={social.name} width={20} height={20} />
                         </a>
                     ))}
@@ -338,6 +341,9 @@ const Footer = () => {
             </div>
 
             <div className="text-center text-xs text-[#0D2B29]/90 max-w-3xl flex-1">
+                <p className="mb-3 font-semibold">
+                    LuxeSkies set the standard. Flyluxsky carries it forward. Born from the same vision and values, both brands are united by one mission: to make business and first-class travel effortless, exclusive, and unforgettable.
+                </p>
                 <p>
                     All prices are in USD, including taxes, fees, and surcharges, based on seat availability in the cheapest booking inventory. Availability is limited, not guaranteed, and subject to restrictions like advance booking, stay durations, weekday travel, seasonal variations, and blackout dates. More flexible fares are available at higher prices—contact our travel managers for details. Fares are nonrefundable, nonexchangeable, nontransferable, and rules may change without notice. Prices for Europe, Africa, Middle East, and India are from US east coast hubs (e.g., New York, Washington, Boston); for Asia and Oceania, from west coast hubs (e.g., Seattle, San Francisco, Los Angeles). Savings up to 70% off are from full unrestricted airline fares and vary by fare rules, departure, destination, dates, duration, and season.
                 </p>
