@@ -294,6 +294,8 @@ const FlightSearchForm: React.FC<FlightSearchFormProps> = ({
       setToInput(airportDisplayName);
       setToSelection(airportToSet);
       setShowToSuggestions(false)
+      // Автоматически открываем календарь для выбора даты отправления
+      setOpenPopover('departure')
     }
   }
   
@@ -950,7 +952,12 @@ const FlightSearchForm: React.FC<FlightSearchFormProps> = ({
                         setMultiSegments(updatedSegments)
                       }
                       
-                      setOpenPopover(null)
+                      // Автоматически открываем календарь для выбора даты возвращения для Round Trip
+                      if (tripType === 'Round Trip') {
+                        setOpenPopover('return')
+                      } else {
+                        setOpenPopover(null)
+                      }
                     }}
                     minDate={new Date()}
                   />
