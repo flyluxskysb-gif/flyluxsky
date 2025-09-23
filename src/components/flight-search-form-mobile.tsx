@@ -877,17 +877,27 @@ const FlightSearchFormMobile: React.FC<FlightSearchFormMobileProps> = ({
             <div className="flex border-b relative h-14">
               <button
                 onClick={() => setCalendarMode('departure')}
-                className={`flex-1 h-full font-poppins font-medium z-10 transition-colors duration-200 ${calendarMode === 'departure' ? 'text-white' : 'text-gray-500'}`}
+                className={`flex-1 h-full font-poppins z-10 transition-colors duration-200 ${calendarMode === 'departure' ? 'text-white' : 'text-gray-600'}`}
                 style={{ position: 'relative', paddingTop: 0, paddingBottom: 0 }}
               >
-                <span className="py-4 block">Departure Date</span>
+                <div className="py-3 flex flex-col items-center justify-center">
+                  <span className={`text-xs font-medium ${departureDate ? (calendarMode === 'departure' ? 'opacity-80' : 'opacity-70') : 'font-semibold text-sm'}`}>Departure Date</span>
+                  <span className={`text-sm font-semibold mt-1 ${calendarMode === 'departure' ? 'opacity-100' : 'opacity-90'}`}>
+                    {departureDate ? formatDate(departureDate) : 'Select date'}
+                  </span>
+                </div>
               </button>
               <button
                 onClick={() => setCalendarMode('return')}
-                className={`flex-1 h-full font-poppins font-medium z-10 transition-colors duration-200 ${calendarMode === 'return' ? 'text-white' : 'text-gray-500'}`}
+                className={`flex-1 h-full font-poppins z-10 transition-colors duration-200 ${calendarMode === 'return' ? 'text-white' : 'text-gray-600'}`}
                 style={{ position: 'relative', paddingTop: 0, paddingBottom: 0 }}
               >
-                <span className="py-4 block">Return Date</span>
+                <div className="py-3 flex flex-col items-center justify-center">
+                  <span className={`text-xs font-medium ${returnDate ? (calendarMode === 'return' ? 'opacity-80' : 'opacity-70') : 'font-semibold text-sm'}`}>Return Date</span>
+                  <span className={`text-sm font-semibold mt-1 ${calendarMode === 'return' ? 'opacity-100' : 'opacity-90'}`}>
+                    {returnDate ? formatDate(returnDate) : 'Select date'}
+                  </span>
+                </div>
               </button>
               <motion.div
                 layout
